@@ -1,0 +1,85 @@
+/* CAROUSEL */
+.carousel-container {
+    margin: 3em auto;
+    position: relative;
+}
+.carousel-container > article:first-of-type {
+    overflow-x: scroll;
+    position: relative;
+    height: auto;
+    margin: 0 auto;
+}
+.carousel-container > article:first-of-type::-webkit-scrollbar {
+    display: none;
+}
+.carousel-container .carousel_items {
+    display: flex;
+}
+/* .carousel-container .carousel_items.slide_btns {
+    width: 90%;
+    margin: 0 auto;
+} */
+.carousel-container .carousel_items.changing {
+    opacity: 0;
+}
+.carousel-container .carousel_items .item {
+    min-width: 200px;
+    margin: 0 20px;
+    z-index: 2;
+}
+.carousel-container .carousel_items .item figure { margin: 0 }
+.carousel_items .item figure ~ p {
+    margin-top: 1em;
+    text-align: center;
+}
+.carousel-container .carousel_items .item > article {
+    margin-top: 1em;
+}
+.carousel-container .carousel_items .item figure ~ article h4 {
+    font-size: 1.09em;
+    margin-bottom: 0.5em;
+}
+.carousel-container .carousel_items .item figure ~ article h4 ~ article > p {
+    display: grid;
+    grid-template-columns: 45% 1fr;
+}
+.carousel-container .controls {
+    gap: 1em;
+    display: flex;
+    justify-content: center;
+    margin-top: 2.5em;
+}
+.carousel-container .controls .slide {
+    height: 0.7em;
+    display: inline-block;
+    width: 0.7em;
+    border: 1px solid var(--gray_medium);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all .2s;
+    place-items: start;
+}
+.carousel-container .controls .slide.active {
+    background-color: var(--mafensa_orange);
+    border:none;
+}
+.carousel-container article#buttons {
+    position: absolute;
+    top: 45%;
+    left: -4%;
+    width: 108%;
+    display: flex;
+    justify-content: space-between;
+}
+.carousel-container article#buttons button {
+    border: none;
+    background-color: unset;
+    padding: 0;
+    font-size: 2em;
+    color: #4c4c4c;
+    transition: .3s;
+    outline: none;
+}
+.carousel-container article#buttons button:hover {
+    color: #282828;
+}
